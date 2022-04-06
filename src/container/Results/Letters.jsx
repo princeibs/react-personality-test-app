@@ -1,24 +1,30 @@
 import React, { useState } from "react";
 
 import { lettersData } from "../../api/data";
+import { HiArrowSmRight } from "react-icons/hi";
+import {MdOutlineCancel} from "react-icons/md"
 
 const Letters = (props) => {
   const [showLetterDetails, setShowLetterDetails] = useState(false);
   const [letterClicked, setLetterClicked] = useState();
   const lettersList = () => (
-    <div>
-      <h1 className="">Letters Result</h1>
-      <h2 className="">{props.lettersResult}</h2>
-      <p className="">What does this result mean?</p>
-      <ul className="">
+    <div className="app__color-content">
+      <h1 className="heading">Letter Result</h1>
+      <h2 className="color">
+        <span>{props.lettersResult}</span>
+      </h2>
+      <p className="p-text">What does the letters mean?</p>
+      <ul className="colors-list">
         {Object.keys(lettersData).map((letter) => (
           <li className="" onClick={() => handleItemClick(letter)}>
+            <HiArrowSmRight />
             {letter}
-            <div className="">{"-->"}</div>
           </li>
         ))}
       </ul>
-      <div onClick={props.onNextClick}>Next {">>"}</div>
+      <div className="btn" onClick={props.onNextClick}>
+        <span>Next</span>
+      </div>
     </div>
   );
 
@@ -27,13 +33,19 @@ const Letters = (props) => {
     setShowLetterDetails(true);
   };
   const letterDetails = () => (
-    <div>
-      <div onClick={() => setShowLetterDetails(false)}>X</div>
-      <div>{lettersData[letterClicked]["title"]}</div>
-      <div>{lettersData[letterClicked]["content"]}</div>
+    <div className="app__color-details">
+      <div onClick={() => setShowLetterDetails(false)}>
+        <MdOutlineCancel />
+      </div>
+      <div className="title">{lettersData[letterClicked]["title"]}</div>
+      <div className="content">{lettersData[letterClicked]["content"]}</div>
     </div>
   );
-  return <div>{showLetterDetails ? letterDetails() : lettersList()}</div>;
+  return (
+    <div className="app__color">
+      {showLetterDetails ? letterDetails() : lettersList()}
+    </div>
+  );
 };
 
 export default Letters;

@@ -3,6 +3,8 @@ import Colors from "./Colors";
 import Letters from "./Letters";
 import Briggs from "./Briggs";
 
+import "./Results.scss"
+
 const Results = (props) => {
   const [showColorsResult, setShowColorsResult] = useState(true);
   const [showLettersResult, setShowLettersResult] = useState(false);
@@ -39,7 +41,7 @@ const Results = (props) => {
   };
 
   return (
-    <div>
+    <div className="app__result">
       {showColorsResult
         ? renderColorsResult()
         : showLettersResult

@@ -1,4 +1,5 @@
 import React from "react";
+import "./Quiz.scss"
 
 const Quiz = (props) => {
   const renderAnswerOptions = (option) => {
@@ -21,16 +22,18 @@ const Quiz = (props) => {
   };
 
   return (
-    <div className="">
-      <div className="">
-        Question <span>{props.questionId}</span> of{" "}
-        <span>{props.questionTotal}</span>
-      </div>
-      <div className="">
-        <h1>{props.question}</h1>
-      </div>
-      <div>
-        <ul>{props.answerOptions.map(renderAnswerOptions)}</ul>
+    <div className="app__quiz">
+      <div className="app__quiz-content">
+        <div className="question-count">
+          Question<span>{props.questionId}</span>of
+          <span>{props.questionTotal}</span>
+        </div>
+        <div className="question-section">
+          <h1>{props.question}</h1>
+        </div>
+        <div className="options-section">
+          <ul>{props.answerOptions.map(renderAnswerOptions)}</ul>
+        </div>
       </div>
     </div>
   );
