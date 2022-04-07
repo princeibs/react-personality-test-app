@@ -4,7 +4,7 @@ import Quiz from "../Quiz/Quiz";
 import Results from "../Results/Results";
 import testQuestions from "../../api/testQuestions";
 
-const Question = () => {
+const Question = (props) => {
   // state variables
   const answersCountObj = {
     Colors: {
@@ -45,6 +45,18 @@ const Question = () => {
     setQuestion(testQuestions[counter].question);
     setAnswerOptions(testQuestions.map((question) => question.answers)[0]);
   });
+
+  const handleResetTest = () => {  
+    // setCounter(0);
+    // setQuestionId(1);
+    // setQuestion();
+    // setAnswerOptions();
+    // setAnswer();
+    // setAnswersCount(answersCountObj);
+    // setBriggsResult();
+    // setColorsResult();
+    // setLettersResult();
+  };
 
   // set answer entered by user
   const setUserAnswer = (answer) => {
@@ -187,6 +199,7 @@ const Question = () => {
         colorsResult={colorsResult}
         lettersResult={lettersResult}
         briggsResult={briggsResult}
+        handleResetTest={handleResetTest}
       />
     );
   };

@@ -133,10 +133,19 @@
     width: 100%;
     margin: 1rem;
     box-shadow: 0 0 0;
+    border-radius: 0;
   }
 }
 
 .app__briggs-content {
+  svg {
+    font-size: 40px;
+    margin-top: 1rem;
+    margin-left: 2rem;
+    cursor: pointer;
+    display: none;
+  }
+
   .heading,
   .briggs,
   .p-text {
@@ -221,7 +230,7 @@
     line-height: 25px;
   }
 
-  @media screen and (max-width: 450px) {    
+  @media screen and (max-width: 450px) {
     border-radius: 10px;
     height: 20rem;
 
@@ -230,7 +239,7 @@
     }
 
     .content {
-      font-size: 1rem;     
+      font-size: 1rem;
     }
   }
 }

@@ -23,7 +23,7 @@ const Results = (props) => {
   };
 
   const renderBriggsResult = () => {
-    return <Briggs briggsResult={props.briggsResult} />;
+    return <Briggs briggsResult={props.briggsResult} handleResetTest={props.handleResetTest} />;
   };
 
   const onNextClick = () => {

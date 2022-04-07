@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { MdOutlineCancel } from "react-icons/md";
+import { BsArrowRepeat } from "react-icons/bs";
 
 import { briggsData } from "../../api/data";
 
@@ -8,6 +9,8 @@ const Briggs = (props) => {
   const [itemClicked, setItemClicked] = useState();
   const itemsList = () => (
     <div className="app__briggs-content">
+      <div onClick={() => props.handleResetTest()}><BsArrowRepeat /></div>
+      
       <h1 className="heading">Briggs Result</h1>
       <h2 className="briggs">
         <span>{props.briggsResult}</span>

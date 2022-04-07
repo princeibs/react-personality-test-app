@@ -15,7 +15,7 @@ const App = () => {
   };
 
   const displayQuestion = () => {
-    return <Question />;
+    return <Question renderIntro={() => displayIntro()}/>;
   };
 
   return <div>{showQuestion ? displayQuestion() : displayIntro()}</div>;
