@@ -5,6 +5,10 @@
   align-items: center;
   height: 100vh;
   background-color: var(--primary-color);
+
+  @media screen and (max-width: 450px) {
+    background-color: var(--card-color);
+  }
 }
 
 .app__intro-content {
