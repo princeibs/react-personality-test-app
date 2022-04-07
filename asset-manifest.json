@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/react-personality-test-app/static/css/main.025c7b54.css",
+    "main.js": "/react-personality-test-app/static/js/main.20d0644a.js",
+    "index.html": "/react-personality-test-app/index.html",
+    "main.025c7b54.css.map": "/react-personality-test-app/static/css/main.025c7b54.css.map",
+    "main.20d0644a.js.map": "/react-personality-test-app/static/js/main.20d0644a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.025c7b54.css",
+    "static/js/main.20d0644a.js"
+  ]
+}
