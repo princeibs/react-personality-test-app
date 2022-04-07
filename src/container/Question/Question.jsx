@@ -81,7 +81,7 @@ const Question = () => {
   const handleAnswerSelected = (event) => {
     setUserAnswer(event.currentTarget.value);
     if (questionId < testQuestions.length) {
-      setTimeout(() => setNextQuestion(), 100);
+      setTimeout(() => setNextQuestion(), 500);
     } else {
       setTimeout(
         () =>
@@ -90,7 +90,7 @@ const Question = () => {
             getLettersResults(),
             getBriggsResults()
           ),
-        50
+        500
       );
     }
   };

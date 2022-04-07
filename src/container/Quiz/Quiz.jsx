@@ -1,19 +1,21 @@
 import React from "react";
-import "./Quiz.scss"
+import "./Quiz.scss";
 
 const Quiz = (props) => {
   const renderAnswerOptions = (option) => {
     return (
       <li>
-        <input
-          checked={option.type === option.answer}
-          id={option.type}
-          value={option.type}
-          name={option.type}
-          disabled={props.answer}
-          onChange={props.onAnswerSelected}
-          type="radio"
-        />
+        <div className="option-box">
+          <input
+            checked={option.type === option.answer}
+            id={option.type}
+            value={option.type}
+            name={option.type}
+            disabled={props.answer}
+            onChange={props.onAnswerSelected}
+            type="radio"
+          />
+        </div>
         <label className="" htmlFor={option.answerType}>
           {option.content}
         </label>
